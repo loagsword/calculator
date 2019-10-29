@@ -32,7 +32,8 @@ class MyTestCase(unittest.TestCase):
         self.test_data = CsvReader('src/td/division.csv').data
         for row in self.test_data:
             self.assertEqual(self.calculator.divide(row['Value 1'], row['Value 2']), Decimal(row['Result']))
-            self.assertEqual(self.calculator.result, Decimal(row['Result']))
+            self.assertEqual(self.calculator.divide('0', row['Value 2']), 'error, the divisor can not be zero')
+            # self.assertEqual(self.calculator.result, Decimal(row['Result']))
 
 if __name__ == '__main__':
     unittest.main()

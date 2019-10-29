@@ -15,10 +15,13 @@ def subtraction(a, b):
 
 
 def division(a, b):
-    a = Decimal(a)
-    b = Decimal(b)
-    c = b/a
-    return round(c, 9)
+    if int(a) != 0:
+        a = Decimal(a)
+        b = Decimal(b)
+        c = b / a
+        return round(c, 9)
+    else:
+        return 'error, the divisor can not be zero'
 
 
 class Calculator:
