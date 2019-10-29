@@ -1,3 +1,6 @@
+from decimal import Decimal
+
+
 def addition(a, b):
     a = int(a)
     b = int(b)
@@ -5,7 +8,17 @@ def addition(a, b):
 
 
 def subtraction(a, b):
-    return a - b
+    a = int(a)
+    b = int(b)
+    c = b - a
+    return c
+
+
+def division(a, b):
+    a = Decimal(a)
+    b = Decimal(b)
+    c = b/a
+    return round(c, 9)
 
 
 class Calculator:
@@ -20,4 +33,8 @@ class Calculator:
 
     def subtract(self, a, b):
         self.result = subtraction(a, b)
+        return self.result
+
+    def divide(self, a, b):
+        self.result = division(a, b)
         return self.result
