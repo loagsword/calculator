@@ -2,40 +2,26 @@ from decimal import Decimal
 
 
 def addition(a, b):
-
-    a = int(a)
-    b = int(b)
-    return a + b
+    return int(a) + int(b)
 
 
 def subtraction(a, b):
-    a = int(a)
-    b = int(b)
-    c = b - a
-    return c
+    return int(b) - int(a)
 
 
 def division(a, b):
     if int(a) != 0:
-        a = Decimal(a)
-        b = Decimal(b)
-        c = b / a
-        return round(c, 9)
+        return round((Decimal(b) / Decimal(a)), 9)
     else:
         return 'error, the divisor can not be zero'
 
 
 def multiplication(a, b):
-    a = int(a)
-    b = int(b)
-    c = b * a
-    return round(c, 9)
+    return round((int(a) * int(b)), 9)
 
 
 def square(a):
-    a = int(a)
-    c = a**2
-    return c
+    return (int(a)) ** 2
 
 
 def square_root(a):
