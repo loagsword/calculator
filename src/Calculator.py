@@ -2,6 +2,7 @@ from decimal import Decimal
 
 
 def addition(a, b):
+
     a = int(a)
     b = int(b)
     return a + b
@@ -38,8 +39,7 @@ def square(a):
 
 
 def square_root(a):
-    c = float('%.10g' % (int(a) ** (1/2)))
-    return c
+    return float('%.10g' % (int(a) ** (1/2)))
 
 
 class Calculator:

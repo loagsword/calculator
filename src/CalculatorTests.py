@@ -4,7 +4,6 @@ from csvReader import CsvReader
 from decimal import Decimal
 
 
-
 class MyTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
