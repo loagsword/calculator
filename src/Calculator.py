@@ -24,6 +24,13 @@ def division(a, b):
         return 'error, the divisor can not be zero'
 
 
+def multiplication(a, b):
+    a = int(a)
+    b = int(b)
+    c = b * a
+    return round(c, 9)
+
+
 class Calculator:
     result = 0
 
@@ -40,4 +47,8 @@ class Calculator:
 
     def divide(self, a, b):
         self.result = division(a, b)
+        return self.result
+
+    def multiply(self, a, b):
+        self.result = multiplication(a, b)
         return self.result
