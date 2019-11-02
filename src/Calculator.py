@@ -1,4 +1,4 @@
-import calcOperations as calc
+import calc_operations as calc
 
 
 class Calculator():
