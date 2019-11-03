@@ -7,6 +7,13 @@ def class_factory(class_name, dictionary):
 
 class CsvReader:
     data = []
+    objects = []
+
+    if data is not None:
+        data.clear()
+
+    if objects is not None:
+        objects.clear()
 
     def __init__(self, filepath):
         with open(filepath) as text_data:
@@ -16,7 +23,6 @@ class CsvReader:
         pass
 
     def return_data_as_objects(self, class_name):
-        objects = []
         for row in self.data:
-            objects.append(class_factory(class_name, row))
-        return objects
+            self.objects.append(class_factory(class_name, row))
+        return self.objects

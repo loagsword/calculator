@@ -9,6 +9,10 @@ class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.calculator = Calculator()
 
+    def tearDown(self):
+        if CsvReader.data is not None:
+            CsvReader.data = []
+
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.calculator, Calculator)
 
